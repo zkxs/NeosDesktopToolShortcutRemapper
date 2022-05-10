@@ -12,6 +12,8 @@ namespace NeosDesktopToolShortcutRemapper
 {
     public class NeosDesktopToolShortcutRemapper : NeosMod
     {
+        internal const string VERSION = "1.0.0";
+
         public override string Name => "NeosDesktopToolShortcutRemapper";
         public override string Author => "runtime";
         public override string Version => "1.0.0";
