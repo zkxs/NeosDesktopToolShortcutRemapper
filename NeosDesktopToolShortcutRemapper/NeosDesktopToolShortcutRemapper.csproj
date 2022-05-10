@@ -3,7 +3,7 @@
     <ProjectGuid>{537B66CA-77E6-4E03-B457-139F43DE5FC7}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <AssemblyName>NeosDesktopToolShortcutRemapper</AssemblyName>
+    <AssemblyName>DesktopToolShortcutRemapper</AssemblyName>
     <RootNamespace>NeosDesktopToolShortcutRemapper</RootNamespace>
     <AssemblyTitle>NeosDesktopToolShortcutRemapper</AssemblyTitle>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
