@@ -1,6 +1,6 @@
 # DesktopToolShortcutRemapper
 
-A [NeosModLoader](https://github.com/zkxs/NeosModLoader) mod for [Neos VR](https://neos.com/) that remaps numeric keys to spawn custom tools using the mod configuration.
+A [NeosModLoader](https://github.com/zkxs/NeosModLoader) mod for [Neos VR](https://neos.com/) that remaps numeric keys to spawn custom tools using the mod configuration. You do not need to restart Neos to update the configuration.
 
 ![configuration screenshot](docs/img/config.png)
 
