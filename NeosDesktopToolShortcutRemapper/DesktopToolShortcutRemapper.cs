@@ -8,11 +8,11 @@ namespace NeosDesktopToolShortcutRemapper
 {
     public class DesktopToolShortcutRemapper : NeosMod
     {
-        internal const string VERSION = "1.0.0";
+        internal const string VERSION = "2.0.0";
 
         public override string Name => "DesktopToolShortcutRemapper";
         public override string Author => "runtime";
-        public override string Version => "2.0.0";
+        public override string Version => VERSION;
         public override string Link => "https://github.com/zkxs/NeosDesktopToolShortcutRemapper";
 
         // map of original tool Uris to remappings
