@@ -18,29 +18,21 @@ jobs:
         with:
           repo: neos-modding-group/NeosModLoader
           file: NeosModLoader.dll
-          target: neos_install/Libraries/
       - name: lint
         run: dotnet format --verbosity detailed --verify-no-changes ./NeosDesktopToolShortcutRemapper.sln
       - name: build
-        run: |
-          dotnet build ./NeosDesktopToolShortcutRemapper.sln --configuration Release "-property:CopyToMods=false"
-          mv ./NeosDesktopToolShortcutRemapper/bin/Release/net462/NeosDesktopToolShortcutRemapper.dll ./NeosDesktopToolShortcutRemapper.dll
+        run: dotnet build ./NeosDesktopToolShortcutRemapper.sln --configuration Release "-property:CopyToMods=false"
       - name: upload workflow artifacts
         if: startsWith(github.ref, 'refs/tags/') || github.ref == 'refs/heads/master' # only publish workflow artifacts for pushes to master or tags
         uses: actions/upload-artifact@v3
         with:
           name: NeosDesktopToolShortcutRemapper
-          path: |
-            ./NeosDesktopToolShortcutRemapper.dll
-            ./NeosDesktopToolShortcutRemapperHeadless.dll
+          path: ./NeosDesktopToolShortcutRemapper/bin/Release/net462/NeosDesktopToolShortcutRemapper.dll
           if-no-files-found: error
       - name: upload release artifacts
         if: startsWith(github.ref, 'refs/tags/') # only publish release artifacts for pushes to tags
         uses: softprops/action-gh-release@v1
         with:
           draft: true # if creating a new release, make it a draft
-          files: |
-            ./NeosDesktopToolShortcutRemapper/bin/Release/net462/0Harmony.dll
-            ./NeosDesktopToolShortcutRemapper.dll
-            ./NeosDesktopToolShortcutRemapperHeadless.dll
+          files: ./NeosDesktopToolShortcutRemapper/bin/Release/net462/NeosDesktopToolShortcutRemapper.dll
           fail_on_unmatched_files: true
