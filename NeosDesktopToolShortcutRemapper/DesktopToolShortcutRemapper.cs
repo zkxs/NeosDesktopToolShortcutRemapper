@@ -1,4 +1,4 @@
-﻿using FrooxEngine;
+using FrooxEngine;
 using HarmonyLib;
 using NeosModLoader;
 using System;
